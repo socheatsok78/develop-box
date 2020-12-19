@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+function main () {
+    local service=$1
+
+    if [ -z "$service" ]; then
+        echo "No action was performed."
+        return 127
+    fi
+
+    docker-compose -f "services/${service}/docker-compose.yml" pull
+}
+
+main "$@"
