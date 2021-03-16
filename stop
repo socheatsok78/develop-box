@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Stopping mysql..."
+./bin/service-down mysql
+
+echo "Stopping redis..."
+./bin/service-down redis

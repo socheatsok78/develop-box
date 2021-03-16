@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Pulling images..."
+./bin/service-pull mysql
+./bin/service-pull redis
+
+echo "Starting mysql..."
+./bin/service-up mysql
+
+echo "Starting redis..."
+./bin/service-up redis
