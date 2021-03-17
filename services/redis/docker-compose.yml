@@ -2,6 +2,7 @@ version: "3.9"
 services:
   redis-master:
     image: 'bitnami/redis:latest'
+    restart: always
     ports:
       - '6379'
     environment:
@@ -13,6 +14,7 @@ services:
 
   redis-replica:
     image: 'bitnami/redis:latest'
+    restart: always
     ports:
       - '6379'
     depends_on:
